@@ -1,5 +1,5 @@
 import express from "express";
-import { trackVisitor } from "../controllers/visitorController.js";
+import { trackVisitor } from "../controller/visitorController.js";
 
 const router = express.Router();
 
