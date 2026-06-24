@@ -5,7 +5,6 @@ import connectDB from './config/db.js';
 import userRoutes from './routes/userRoutes.js';
 import taskRoutes from './routes/taskRoutes.js';
 import userTaskRoutes from './routes/userTaskRoutes.js';
-import visitorRoutes from './routes/visitorRoute.js'
 
 dotenv.config();
 const app = express();
@@ -25,9 +24,6 @@ app.get('/', (req, res) => {
 app.use('/api/auth', userRoutes);
 app.use('/api/admin', taskRoutes);
 app.use('/api/user', userTaskRoutes);
-// visitors
-app.set("trust proxy", true);
-app.use("/api/visitors", visitorRoutes);
 
 const PORT = process.env.PORT || 3000;
 
